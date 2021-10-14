@@ -14,10 +14,12 @@
         "passport": "^0.5.0"
     },
     "devDependencies": {
+        "@sap/ux-specification": "^1.90.10",
         "sqlite3": "^5.0.2"
     },
     "scripts": {
-        "start": "cds run"
+        "start": "cds run",
+        "undeploy": "cf undeploy cap-auth --delete-services --delete-service-keys"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",

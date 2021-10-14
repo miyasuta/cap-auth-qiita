@@ -67,8 +67,4 @@ resources:
    parameters:
      service: xsuaa
      service-plan: application  
-     config:
-       xsappname: cap-auth-${space}    #  name + space dependency
-       tenant-mode: dedicated
-
-
+     path: ./xs-security.json 

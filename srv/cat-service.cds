@@ -7,3 +7,26 @@ service CatalogService {
         ])    
     @readonly entity Books as projection on my.Books;
 }
+
+annotate CatalogService.Books with @(
+    UI: {
+        SelectionFields  : [
+            ID,
+            title
+        ],
+        LineItem  : [
+            {
+                $Type : 'UI.DataField',
+                Value : ID,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : title,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : stock,
+            }
+        ],
+    }
+);
